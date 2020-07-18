@@ -1,32 +1,12 @@
-/**
-
- *
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- *
- * Dependencies: None
- *
- * JS Version: ES2015/ES6
- *
- * JS Standard: ESlint
- *
-*/
-
-/**
- * Define Global Variables
- *
- */
 // button
-scrollButton = document.getElementById("myBtn");
-
+scrollButton = document.getElementById("topBtn");
+// scroll function
 window.onscroll = function() {
   // Nav Scroll Bar
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let scrolled = (winScroll / height) * 100;
+  document.getElementById("prgrsBar").style.width = scrolled + "%";
   // Scroll to Top Button
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     scrollButton.style.display = "block";
@@ -38,14 +18,9 @@ window.onscroll = function() {
 function topFunction() {
   document.documentElement.scrollTop = 0;
 }
+// end scroll function
 
-/**
- * End Helper Functions
- * Begin Main Functions
- *
- */
-
-// build the nav
+// build the nav bar
 let unorderedList = document.getElementById("unordered-list");
 let containerCount = document.getElementsByClassName("landing__container").length;
 for (i = 1; i <= containerCount; i++) {
@@ -62,31 +37,11 @@ for (i = 1; i <= containerCount; i++) {
 }
 
 function scrollTo(elem) {
-  var element = document.getElementById(elem);
+  let element = document.getElementById(elem);
   element.scrollIntoView();
 }
+// end nav bar
 
-
-// Add class 'active' to section when near top of viewport
-// When the user scrolls the page, execute myFunction
-
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- *
- */
-
-// Build menu
-
-// Scroll to section on link click
-
-// sticky navbar
-// Helper
 
 // on scroll highlights
 let activeElement = function(elem) {
@@ -101,12 +56,13 @@ for (i = 1; i < containerCount + 1; i++) {
   let activeNavItem = document.getElementById("sample-nav-" + i);
   window.addEventListener("scroll", function(event) {
     if (activeElement(activeSection)) {
-      // Deactivate all sections and Deactivate nav items
-      var previous_sections = document.querySelectorAll(".your-active-class");
+      // Deactivate all sections Deactivate nav items
+      let previous_sections = document.querySelectorAll(".your-active-class");
       [].forEach.call(previous_sections, function(el) {
         el.classList.remove("your-active-class");
       });
-      var previous_nav_items = document.querySelectorAll(".navActive");
+      // Deactivate all nav items
+      let previous_nav_items = document.querySelectorAll(".navActive");
       [].forEach.call(previous_nav_items, function(el) {
         el.classList.remove("navActive");
       });

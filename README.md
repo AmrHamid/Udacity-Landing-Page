@@ -1,13 +1,17 @@
 # Landing Page Project
+Landing page project for FWD initiative professional track.
 
-## Table of Contents
+## Specs
+Navigation:- Navigation is built dynamically as an unordered list.
 
-* [Instructions](#instructions)
+Responsive Navigation Bar:- resizes to fit any screen size.
 
-## Instructions
+Section Active State:- It should be clear which section is being viewed while scrolling through the page.
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+Scroll to Anchor:- When clicking an item from the navigation menu, the link should scroll to the appropriate section.
 
-To get started, open `js/app.js` and start building out the app's functionality
+Progress Bar:- shows in which part of the page is being viewed.  
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+Top Button:- takes you back to top.
+
+## Amr Hamid Mahmoud
